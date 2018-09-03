@@ -37,7 +37,8 @@ import android.os.PowerManager;
 
 import org.json.JSONObject;
 
-import static android.os.PowerManager.PARTIAL_WAKE_LOCK;
+import static android.os.PowerManager.SCREEN_BRIGHT_WAKE_LOCK;
+import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
 
 /**
  * Puts the service in a foreground state, where the system considers it to be
