@@ -21,6 +21,7 @@
 
 package de.appplant.cordova.plugin.background;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -120,7 +121,7 @@ public class ForegroundService extends Service {
                 getSystemService(POWER_SERVICE);
 
         wakeLock = pm.newWakeLock(
-                PARTIAL_WAKE_LOCK, "BackgroundMode");
+                SCREEN_BRIGHT_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "BackgroundMode");
 
         wakeLock.acquire();
     }
