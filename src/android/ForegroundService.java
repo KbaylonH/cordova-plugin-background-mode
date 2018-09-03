@@ -109,6 +109,7 @@ public class ForegroundService extends Service {
      * Put the service in a foreground state to prevent app from being killed
      * by the OS.
      */
+    @SuppressLint({"Wakelock"})
     private void keepAwake() {
         JSONObject settings = BackgroundMode.getSettings();
         boolean isSilent    = settings.optBoolean("silent", false);
